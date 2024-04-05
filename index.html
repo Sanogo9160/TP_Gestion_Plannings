@@ -5,18 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liste de Tâches Interactive</title>
     <link rel="stylesheet" href="Style_TP.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="container">
-        <h1>Liste de Tâches</h1>
-        <input type="text" id="taskInput" placeholder="Ajouter une nouvelle tâche">
-        <button id="addTaskBtn">Ajouter</button>
 
-        <!-- Ici va être affiché la liste de mes differents tâches -->
-        <ul id="taskList">
+<h1 class="title">Liste de Tâches <img src="Mes_Images/book.png" alt="Mes_Taches"></h1>
 
-        </ul>
+<div class="taskList">
+
+    <div class="headList">
+
+        <label for="name">Tâche:</label>
+        <input type="text" class="entered-List" placeholder="Ajouter une nouvelle tâche" aria-label="Une nouvelle tâche">
+
+        <!--AJOUT de Date d'echéance -->
+        <label for="Date">Date d'echéance: </label>
+        <input type="date" class="due-date" placeholder="Date d'échéance" aria-label="Date d'echéance">
+
+        <!-- les priorités des taches  -->
+        <label for="name">Priorité:</label>
+        <select class="priority" aria-label="Priorité">
+            <option value="low">Basse priorité</option>
+            <option value="medium">Priorité moyenne</option>
+            <option value="high">Haute priorité</option>
+        </select>
+
+        <!-- Statut des différentes taches  -->
+        <label for="name">Statut:</label>
+        <select class="status" aria-label="Statut">
+            <option value="À faire">À faire</option>
+            <option value="En cours">En cours</option>
+            <option value="Terminée">Terminée</option>
+        </select>
+
+        <!-- Insertion du Button Ajout -->
+        <button class="add-List">Ajouter</button>
+
     </div>
-    <script src="scripts.js"></script>
+
+    <!-- Les tâches seront ajoutées ici dynamiquement -->
+    <div class="tasks">
+        <!-- Les tâches ajoutées dynamiquement apparaîtront ici -->
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
 </body>
 </html>
