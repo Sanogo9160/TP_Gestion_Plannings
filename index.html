@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,36 +7,48 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container" role="application" aria-label="Task List">
-        <h1>LISTE DE TACHES APP <img src="Mes_Images/book.png" alt="book"></h1>
-        <label for="taskInput">Description de la tâche :</label>
-            <input type="text" id="taskInput" placeholder="Ajouter une nouvelle tâche" aria-labelledby="taskInput">
-        <!--AJOUT de Date d'echéance -->   
-        <label for="dueDateInput">Date d'échéance:</label>
-            <input type="date" id="dueDateInput" aria-labelledby="dueDateInput">
+    <div class="container" role="application" aria-label="Liste de tâches">
+        <h1>LISTE DE TACHES APP <img src="Mes_Images/book.png" alt="livre"></h1>
 
-        
-        <label for="priorityInput">Priorité:</label>
+        <!-- Conteneur pour la description de la tâche -->
+        <div class="input-container">
+            <label for="taskInput">Description de la tâche :</label>
+            <input type="text" id="taskInput" class="task-text" placeholder="Ajouter une nouvelle tâche" aria-labelledby="taskInput">
+        </div>
+
+        <!-- Conteneur pour la date d'échéance -->
+        <div class="input-container">
+            <label for="dueDateInput">Date d'échéance :</label>
+            <input type="date" id="dueDateInput" aria-labelledby="dueDateInput">
+        </div>
+
+        <!-- Conteneur pour la priorité -->
+        <div class="input-container">
+            <label for="priorityInput">Priorité :</label>
             <select id="priorityInput" aria-labelledby="priorityInput">
                 <option value="">Sélectionner la priorité de la tâche</option>
                 <option value="low">Basse</option>
                 <option value="medium">Moyenne</option>
                 <option value="high">Haute</option>
             </select>
-         <!--AJOUT de Statut pour tâche -->      
-        <label for="statusInput">Statut:</label>
-        <select id="statusInput" aria-labelledby="statusInput">
-            <option value="">Selectionner le statut de la tâche</option>
-            <option value="pending">En attente</option>
-            <option value="in_progress">En cours</option>
-            <option value="completed">Complétée</option>
-        </select><br>
+        </div>
 
-          <!--insertion du bouton pour ajouter une tâche -->  
+        <!-- Conteneur pour le statut -->
+        <div class="input-container">
+            <label for="statusInput">Statut :</label>
+            <select id="statusInput" aria-labelledby="statusInput">
+                <option value="">Sélectionner le statut de la tâche</option>
+                <option value="pending">En attente</option>
+                <option value="in_progress">En cours</option>
+                <option value="completed">Complétée</option>
+            </select>
+        </div>
+
+          <!-- Insertion du bouton pour ajouter une tâche -->  
         <button id="addTaskBtn" class="center-btn">Ajouter </button>
 
         <!-- Les tâches seront ajoutées ici dynamiquement -->
-        <ul id="taskList" aria-label="Tasks"></ul>
+        <ul id="taskList" aria-label="Tâches"></ul>
     </div>
 
     <script src="scripte.js"></script>

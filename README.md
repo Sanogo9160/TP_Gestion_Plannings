@@ -1,5 +1,7 @@
 # Nom du projet: TP_Gestion_Plannings
 
+## Nom de l'application: MyTachesList 
+
 
 ### Partie HTML (index.html)
 

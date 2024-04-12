@@ -1,4 +1,3 @@
-
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f8f9fa;
@@ -7,7 +6,7 @@ body {
 }
 
 .container {
-    max-width: 500px;
+    max-width: 400px;
     margin: 50px auto;
     padding: 20px;
     background-color: #fff;
@@ -38,41 +37,49 @@ h1 {
     color: #007bff;
 }
 
-img{
-    height: 20px;
-    width: 40px;
+
+.input-container {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
 }
 
-.input-group {
-    margin-bottom: 20px;
-}
-
-label {
+/* Ajout de largeur fixe pour les étiquettes */
+.input-container label {
+    width: 150px; 
+    margin-right: 10px;
     font-weight: bold;
 }
 
-
-input[type="text"],
-input[type="date"],
-select {
-    width: 95%;
+/* Application de  Flexbox pour aligner les éléments dans les conteneurs */
+.input-container input,
+.input-container select {
+    flex: 1; /* Pour que les champs occupent tout l'espace restant */
     padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border-radius: 4px;
+    border-radius: 5px;
     border: 1px solid #ccc;
+    margin-top: 5px;
+
 }
 
 
+.task-text {
+    max-width: 400px;  /* Pour Régler la largeur maximale */
+    word-wrap: break-word; /*Pour permettre le retour à la ligne des mots longs */
+}
+
+/* Ajustement pour le bouton Ajouter */
 button {
-    width: 50%;
+    width: 40%; /* Pour qu'il occupe 40% la largeur du conteneur */
     padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+
+    
 }
 
 
@@ -82,9 +89,30 @@ button {
 }
 
 
-
 button:hover {
     background-color: #0056b3;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+
+/* Ajout d'une marge inférieure à la liste de tâches */
+#taskList {
+    margin-top: 20px;
+    
 }
 
 ul {
@@ -92,9 +120,8 @@ ul {
     padding: 0;
 }
 
-
 li {
-    display: flex;
+    display: block;
     justify-content: space-between;
     align-items: center;
     padding: 15px;
@@ -106,20 +133,10 @@ li {
 }
 
 
-.delete-btn {
-    background-color: #dc3545;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.editable{
+    margin-bottom: 5px; /* Ajoute de l'espace entre chaque ligne d'information */
+    display: block; /* Pour que chaque ligne d'information occupe une ligne différente */
+    font-size: 16px; /* Taille de la police */
+    color: #333; /* Couleur du texte */
+        
 }
-
-
-.delete-btn:hover {
-    background-color: #c82333;
-}
-
-
-
