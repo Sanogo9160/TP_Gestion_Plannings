@@ -1,12 +1,14 @@
-// Importer la bibliothèque de tests (avec Jest)
-// Il est nécessaire d'installer Jest avec npm ou yarn avant de l'utiliser
-const { test, expect } = require('@jest/globals');
+const { localStorageMock } = require('jest-localstorage-mock');
 
-// Importation ou définition des fonctions à tester
-// Dans ce cas précis, il s'agit des fonctions addTask et deleteTask
+// Configuration de jest-localstorage-mock
+global.localStorage = localStorageMock;
 
+// Importation ou définition des fonctions à tester ici
+const { addTask, deleteTask } = require('./scripte'); 
+
+// Les tests sont ici
 test('Ajouter une tâche', () => {
-    // Définir un tableau de tâches initial
+    // Définition d'un tableau de tâches initial
     const tasks = [];
 
     // Ajouter une tâche
@@ -27,3 +29,7 @@ test('Supprimer une tâche', () => {
     // Vérifier si la tâche a été supprimée avec succès
     expect(tasks.length).toBe(0);
 });
+
+
+
+

@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-    max-width: 400px;
+    max-width: 400px; 
     margin: 50px auto;
     padding: 20px;
     background-color: #fff;
@@ -14,7 +14,6 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     
 }
-
 
 .title {
     font-size: 30px;
@@ -42,23 +41,27 @@ h1 {
     margin-bottom: 15px;
     display: flex;
     align-items: center;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne lorsque l'espace est insuffisant */
 }
+
+
 
 /* Ajout de largeur fixe pour les étiquettes */
 .input-container label {
-    width: 150px; 
+    width: 150px;
     margin-right: 10px;
-    font-weight: bold;
+    font-weight: bold; 
+    margin-bottom: 5px; /* Ajoute de l'espace entre chaque champ */
 }
 
 /* Application de  Flexbox pour aligner les éléments dans les conteneurs */
 .input-container input,
 .input-container select {
     flex: 1; /* Pour que les champs occupent tout l'espace restant */
+    margin-top: 5px;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    margin-top: 5px;
 
 }
 
@@ -78,10 +81,9 @@ button {
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-
+    margin-top: 5px;
     
 }
-
 
 .center-btn{
     display: block;
@@ -140,3 +142,13 @@ li {
     color: #333; /* Couleur du texte */
         
 }
+
+
+@media screen and (min-width: 460px) {
+    .container {
+        max-width: 500px;  /*Réduit la largeur maximale sur les écrans plus larges*/
+    }
+}
+
+
+ 

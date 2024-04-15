@@ -1,0 +1,25 @@
+{
+  "name": "tp_gestion_plannings",
+  "version": "1.0.0",
+  "description": "- J'ai d'abord créer Une structure HTML de base comprenant une balise `<div>` avec une classe `.container` pour contenir l'application.\r - Ensuite j'ai ajouter des éléments tels que `<input>`, `<select>`, et `<button>` pour permettre à l'utilisateur de saisir et d'ajouter de nouvelles tâches.\r -Par la suite, j'ai créer une liste `<ul>` avec comme identifiant `taskList` pour afficher les tâches ajoutées.",
+  "main": "scripte.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sanogo9160/TP_Gestion_Plannings.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sanogo9160/TP_Gestion_Plannings/issues"
+  },
+  "homepage": "https://github.com/Sanogo9160/TP_Gestion_Plannings#readme",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-localstorage-mock": "^2.4.26",
+    "jsdom": "^24.0.0"
+  }
+}
